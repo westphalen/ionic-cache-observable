@@ -1,0 +1,41 @@
+{
+  "name": "ionic-cache-observable",
+  "version": "0.0.1",
+  "description": "Ionic cache service to sync observables with local storage.",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf aot dist && ngc",
+    "test": "echo \"Error: no tests created\" && exit 1",
+    "shipit": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/westphalen/ionic-cache-observable.git"
+  },
+  "keywords": [
+    "ionic2",
+    "cache",
+    "storage",
+    "observables",
+    "ionic",
+    "angular2",
+    "performance",
+    "observable"
+  ],
+  "author": "Sune Westphalen",
+  "license": "MIT",
+  "homepage": "https://github.com/westphalen/ionic-cache-observable",
+  "devDependencies": {
+    "@angular/core": "4.4.4",
+    "@angular/common": "4.4.4",
+    "@ionic/storage": "^2.1.3",
+    "@angular/compiler": "4.4.4",
+    "@angular/compiler-cli": "4.4.4",
+    "rxjs": "5.4.3",
+    "typescript": "2.3.4"
+  },
+  "peerDependencies": {
+    "@ionic/storage": "^2.1.3"
+  }
+}
