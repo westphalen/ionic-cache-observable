@@ -7,7 +7,7 @@ This improves performance by only executing observables once, and allows your ap
 
 Install the package:
 
-    npm install git+https://github.com/westphalen/ionic-cache-observable.git
+    npm install --save ionic-cache-observable
     
 Import in your project `app.module.ts`:
 
@@ -19,6 +19,10 @@ Import in your project `app.module.ts`:
             ...
         ]
     })
+    
+## Blog post
+
+Read about using the module or try out the sample Ionic app on [Medium](https://medium.com/@westphalen/make-offline-capable-ionic-apps-with-cached-observables-12d79a3a1e75).
 
 ## Usage example
 

@@ -1,13 +1,13 @@
 {
   "name": "ionic-cache-observable",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Ionic cache service to sync observables with local storage.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "rm -rf aot dist && ngc",
     "test": "echo \"Error: no tests created\" && exit 1",
-    "shipit": "npm run build && npm publish"
+    "shipit": "npm run build && cp -f package.json dist/ && cp -f README.md dist/ && cd dist/ && npm publish"
   },
   "repository": {
     "type": "git",
