@@ -1,6 +1,6 @@
 {
   "name": "ionic-cache-observable",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Ionic cache service to sync observables with local storage.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

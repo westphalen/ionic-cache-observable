@@ -112,7 +112,13 @@ Make sure to unsubscribe when needed, ie in `ionViewWillLeave`.
 5. Advanced usage might have you re-registering the cache with a more detailed observable.
     1. First it's registered with `shoppingListProvider.get()`
     2. On a deeper page, you can re-register with `shoppingListProvider.get({include: 'users'})`, because that page needs the the shopping list's owners.
-    3. The deeper page would first display the cached value (without owners) and then when the refreshed value arrives, add the user info. 
+    3. The deeper page would first display the cached value (without owners) and then when the refreshed value arrives, add the user info.
+    
+6. Listen to errors (added 2018-04-04)
+    1. Errors can occur due to local storage, but most commonly because of your source observable (eg. 401 or internet disconnected).
+    2. Before you could only listen to errors directly from `cache.refresh().subscribe()`.
+    3. Now you can subscribe to the `cache.error$` Subject, that receive all errors related to the Cache instance.
+    4. A convenient method is `cache.data$()` that takes an error callback parameter that is triggered by any changes to `cache.error$`, while the function itself returns an Observable with data from `cache.get$`. This way you don't have to subscribe to both `get$` and `error$`, making `data$()` really useful in templates with the `async` pipe.  
 
 ## Contribution
 
